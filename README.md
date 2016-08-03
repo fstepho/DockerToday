@@ -1,8 +1,8 @@
-### Docker Today
+# Docker Today
 
 ## Docker Commands
 
-#dev
+### dev
 docker build --tag webapp:dev --file Dockerfile.dev .
 
 docker run --rm --name webapp -v `pwd`:/app -it -p 8080:80 -link service webapp:dev
@@ -11,7 +11,7 @@ docker build --tag service:dev --file Dockerfile .
 
 docker run --rm --name service -v `pwd`:/app -it -p 8081:80 service:dev
 
-#deploy
+### deploy
 
 docker build --tag gmatech/dockertoday:1.0.0-webapp .
 
