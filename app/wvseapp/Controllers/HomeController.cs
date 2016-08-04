@@ -12,9 +12,9 @@ namespace wvse.Controllers
         {
             _versionServiceProxy = new VersionServiceProxy();
         }
-        public async Task<IActionResult> Index()
+        public IActionResult Index()
         {
-            var version = "1.0.0";
+            var version = "1.0.1";
 
             //var version = await _versionServiceProxy.GetVersion();
 

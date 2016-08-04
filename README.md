@@ -3,9 +3,21 @@
 ## Docker Commands
 
 ### Dev
+
+App
+
+docker build --tag webapp:dev .
+
+docker run -d --name webapp -p 8080:80 webapp:dev
+
+
 docker build --tag webapp:dev --file Dockerfile.dev .
 
+docker run --rm --name webapp -v `pwd`:/app -it -p 8080:80 webapp:dev
+
 docker run --rm --name webapp -v `pwd`:/app -it -p 8080:80 -link service webapp:dev
+
+Service
 
 docker build --tag service:dev --file Dockerfile.dev .
 
@@ -13,9 +25,13 @@ docker run --rm --name service -v `pwd`:/app -it -p 8081:80 service:dev
 
 ### Deploy
 
+App
+
 docker build --tag gmatech/dockertoday:1.0.0-webapp .
 
 docker run -d --name webapp -p 8080:80 -link service gmatech/dockertoday:1.0.0-webapp
+
+Service
 
 docker build --tag gmatech/dockertoday:1.0.0-service .
 
