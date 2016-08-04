@@ -14,9 +14,9 @@ namespace wvse.Controllers
         }
         public async Task<IActionResult> Index()
         {
-            //var version = 6;
+            var version = "1.0.0";
 
-            var version = await _versionServiceProxy.GetVersion();
+            //var version = await _versionServiceProxy.GetVersion();
 
             return View(version);
         }
