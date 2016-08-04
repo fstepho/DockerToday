@@ -7,7 +7,7 @@ namespace swvapp.Proxies
     public class VersionServiceProxy
     {
         private HttpClient _httpClient;
-        private string _versionServiceBaseUrl = "http://service/api/";
+        private string _versionServiceBaseUrl = "http://localhost:5000/api/";
     
         public VersionServiceProxy()
         {

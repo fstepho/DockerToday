@@ -1,7 +1,5 @@
-using System.Collections.Generic;
 using System.IO;
 using Newtonsoft.Json;
-using wvse.Service.Data;
 using wvse.Service.Data.Entities;
 
 namespace wvse.Service.Data
@@ -16,7 +14,7 @@ namespace wvse.Service.Data
             using (var r = new StreamReader(fs))
             {
                 string json = r.ReadToEnd();
-                version = JsonConvert.DeserializeObject<Version>>(json);
+                version = JsonConvert.DeserializeObject<Version>(json);
             }
             
             return version;

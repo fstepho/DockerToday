@@ -2,16 +2,16 @@
 
 ## Docker Commands
 
-### dev
+### Dev
 docker build --tag webapp:dev --file Dockerfile.dev .
 
 docker run --rm --name webapp -v `pwd`:/app -it -p 8080:80 -link service webapp:dev
 
-docker build --tag service:dev --file Dockerfile .
+docker build --tag service:dev --file Dockerfile.dev .
 
 docker run --rm --name service -v `pwd`:/app -it -p 8081:80 service:dev
 
-### deploy
+### Deploy
 
 docker build --tag gmatech/dockertoday:1.0.0-webapp .
 
@@ -27,8 +27,8 @@ docker run -d --name service -p 8081:80 gmatech/dockertoday:1.0.0-service
 dotnet run --server.urls http://0.0.0.0:80/
 
 ## Mac Stuff
-https://forums.docker.com/t/is-there-a-way-to-go-into-the-docker-host/12104
 
+https://forums.docker.com/t/is-there-a-way-to-go-into-the-docker-host/12104
 
 ## Resources
 

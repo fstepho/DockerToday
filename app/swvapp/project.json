@@ -79,6 +79,6 @@
   },
 
   "tooling": {
-    "defaultNamespace": "swvapp"
+    "defaultNamespace": "wvseapp"
   }
 }
