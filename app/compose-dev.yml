@@ -1,0 +1,10 @@
+version: '2'
+services:
+  webApp:
+    image: webapp:dev
+    ports:
+      - "8080:80"
+  service:
+    image: service:dev
+    ports:
+      - "8081:80"
