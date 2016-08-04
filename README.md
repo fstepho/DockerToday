@@ -21,7 +21,9 @@ Service
 
 docker build --tag service:dev --file Dockerfile.dev .
 
-docker run --rm --name service -v `pwd`:/app -it -p 8081:80 service:dev
+docker run --rm --name service -v `pwd`:/app  -it -p 8081:80 service:dev
+
+docker run --rm --name service -v `pwd`:/app -v /tmp/data:/data  -it -p 8081:80 service:dev
 
 ### Deploy
 
