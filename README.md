@@ -26,6 +26,9 @@ docker run -d --name service -p 8081:80 gmatech/dockertoday:1.0.0-service
 
 dotnet run --server.urls http://0.0.0.0:80/
 
+## Mac Stuff
+https://forums.docker.com/t/is-there-a-way-to-go-into-the-docker-host/12104
+
 
 ## Resources
 
