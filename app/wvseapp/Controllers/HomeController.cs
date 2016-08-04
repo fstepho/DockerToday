@@ -18,7 +18,7 @@ namespace wvse.Controllers
 
             //var version = await _versionServiceProxy.GetVersion();
 
-            return View(version);
+            return View("Index", version);
         }
     }
 }
